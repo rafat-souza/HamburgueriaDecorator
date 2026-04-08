@@ -11,7 +11,7 @@ public class Combo {
         this.bebida = fabrica.criarBebida();
     }
 
-    public void adicioanrIngrediente(Hamburguer hamburguerDecorado) {
+    public void adicionarIngrediente(Hamburguer hamburguerDecorado) {
         this.hamburguer = hamburguerDecorado;
     }
 

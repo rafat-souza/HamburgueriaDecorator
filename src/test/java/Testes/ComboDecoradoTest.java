@@ -1,11 +1,11 @@
 package Testes;
 
 import hamburgueria.Combo;
+import hamburgueria.Combos.FabricaComboVegano;
 import hamburgueria.Extras.CebolaCaramelizada;
 import hamburgueria.Extras.Queijo;
 import hamburgueria.FabricaDeCombo;
 import hamburgueria.Hamburguer;
-import hamburgueria.TipoCombo;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,7 +15,7 @@ public class ComboDecoradoTest {
     @Test
     public void testCriacaoDeComboComExtras() {
 
-        FabricaDeCombo fabrica = TipoCombo.VEGANO.instanciarFabrica();
+        FabricaDeCombo fabrica = new FabricaComboVegano();
 
         Combo combo = new Combo(fabrica);
 

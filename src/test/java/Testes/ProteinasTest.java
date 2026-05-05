@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ProteinasTest {
     @Test
-    public void testProteinaCarneEPlantaValoresBase() {
+    public void deveCriarLanchesProteinaCarneEPlantaComValoresBase() {
         Proteina carne = new Carne();
         Proteina planta = new Planta();
 

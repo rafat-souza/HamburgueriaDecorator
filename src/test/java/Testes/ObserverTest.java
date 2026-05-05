@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 public class ObserverTest {
     @Test
-    public void testObserversNotificadosAoFinalizar() {
+    public void deveNotificarAoFinalizar() {
         Combo combo = new Combo(new FabricaComboTradicional());
 
         PedidoObserver cozinha = new Cozinha();

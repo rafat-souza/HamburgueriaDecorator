@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CombosTest {
     @Test
-    public void testFabricaComboTradicionalGeraProdutosCorretos() {
+    public void deveFazerFabricaComboTradicionalGerarProdutosCorretos() {
         FabricaDeCombo fabrica = new FabricaComboTradicional();
 
         Hamburguer h = fabrica.criarHamburguer();
@@ -25,7 +25,7 @@ public class CombosTest {
     }
 
     @Test
-    public void testFabricaComboVeganoGeraProdutosCorretos() {
+    public void deveFazerFabricaComboVeganoGerarProdutosCorretos() {
         FabricaDeCombo fabrica = new FabricaComboVegano();
 
         Hamburguer h = fabrica.criarHamburguer();

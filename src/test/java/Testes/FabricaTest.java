@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FabricaTest {
     @Test
-    public void testEnumFactoryMethodRetornaInstanciaCorreta() {
+    public void deveRetornarInstanciaCorreta() {
         FabricaDeCombo f1 = new FabricaComboTradicional();
         FabricaDeCombo f2 = new FabricaComboVegano();
 

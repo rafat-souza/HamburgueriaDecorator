@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ComboDecoradoTest {
     @Test
-    public void testCriacaoDeComboComExtras() {
+    public void deveCriarComboComExtras() {
 
         FabricaDeCombo fabrica = new FabricaComboVegano();
 

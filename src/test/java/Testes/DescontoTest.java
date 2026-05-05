@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class DescontoTest {
 
     @Test
-    public void testSemDescontoMantemPrecoOriginal() {
+    public void deveSemDescontoManterPrecoOriginal() {
         Combo combo = new Combo(new FabricaComboTradicional());
 
         combo.setEstrategiaDeDesconto(new SemDesconto());
@@ -22,7 +22,7 @@ public class DescontoTest {
     }
 
     @Test
-    public void testDescontoPorcentagemReduzPrecoCorretamente() {
+    public void deveFazerDescontoPorcentagemReduzirPrecoCorretamente() {
         Combo combo = new Combo(new FabricaComboTradicional());
 
         combo.setEstrategiaDeDesconto(new DescontoPorcentagem(10));
@@ -31,7 +31,7 @@ public class DescontoTest {
     }
 
     @Test
-    public void testDescontoFidelidadeSubtraiValorFixo() {
+    public void deveFazerDescontoFidelidadeSubtrairValorFixo() {
         Combo combo = new Combo(new FabricaComboVegano());
 
         combo.setEstrategiaDeDesconto(new DescontoFidelidade(5.0));
@@ -40,7 +40,7 @@ public class DescontoTest {
     }
 
     @Test
-    public void testEstrategiaPodeSerTrocadaEmRuntime() {
+    public void deveFazerEstrategiaPodeSerTrocadaEmRuntime() {
         Combo combo = new Combo(new FabricaComboTradicional());
 
         combo.setEstrategiaDeDesconto(new DescontoPorcentagem(50));
@@ -51,7 +51,7 @@ public class DescontoTest {
     }
 
     @Test
-    public void testDescontoFidelidadeNaoRetornaPrecoNegativo() {
+    public void naoDeveDescontoFidelidadeRetornarPrecoNegativo() {
         Combo combo = new Combo(new FabricaComboTradicional());
         combo.setEstrategiaDeDesconto(new DescontoFidelidade(999.0));
 

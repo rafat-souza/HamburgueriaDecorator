@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class EstilosTest {
     @Test
-    public void testBridgeEstilosDeHamburger() {
+    public void deveCriarEstilosDeHamburgerCorretos() {
         Hamburguer smashVegano = new SmashBurger(new Planta());
 
         assertEquals("Smash Burger de Proteína de Ervilha", smashVegano.getDescricao());

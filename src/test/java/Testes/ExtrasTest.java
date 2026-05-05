@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ExtrasTest {
     @Test
-    public void testDecoratorUnicoIngrediente() {
+    public void deveDecorarComUnicoIngrediente() {
         Hamburguer lancheBase = new BurgerClassico(new Carne());
         Hamburguer lancheComQueijo = new Queijo(lancheBase);
 
@@ -24,7 +24,7 @@ public class ExtrasTest {
     }
 
     @Test
-    public void testDecoratorMultiplosIngredientesEmCadeia() {
+    public void deveDecorarComMultiplosIngredientesEmCadeia() {
         Hamburguer lanche = new SmashBurger(new Planta());
 
         lanche = new Queijo(lanche);

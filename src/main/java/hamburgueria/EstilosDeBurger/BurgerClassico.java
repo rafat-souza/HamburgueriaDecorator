@@ -7,7 +7,8 @@ public class BurgerClassico extends EstiloHamburguer {
     public BurgerClassico(Proteina proteina) { super(proteina);}
 
     @Override
-    public String getDescricao() {return "Hambúrguer Clássico de " + proteina.getNome();}
+    protected String getEstilo() { return "Hambúrguer Clássico"; }
+
     @Override
-    public double getPreco() { return proteina.getPrecoBase() + 6.0;}
+    public double getPreco() { return proteina.getPrecoBase() + 6.0; }
 }

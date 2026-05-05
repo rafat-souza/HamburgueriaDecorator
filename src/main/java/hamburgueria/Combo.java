@@ -1,5 +1,7 @@
 package hamburgueria;
 
+import hamburgueria.Descontos.SemDesconto;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +10,7 @@ public class Combo {
     private Acompanhamento acompanhamento;
     private Bebida bebida;
     private List<PedidoObserver> observers = new ArrayList<>();
+    private EstrategiaDeDesconto estrategiaDeDesconto = new SemDesconto();
 
     public Combo(FabricaDeCombo fabrica) {
         this.hamburguer = fabrica.criarHamburguer();
@@ -33,12 +36,22 @@ public class Combo {
         this.hamburguer = hamburguerDecorado;
     }
 
+    public void setEstrategiaDeDesconto(EstrategiaDeDesconto estrategia) {
+        this.estrategiaDeDesconto = estrategia;
+    }
+
+    public double getPrecoFinal() {
+        return estrategiaDeDesconto.aplicar(hamburguer.getPreco());
+    }
+
     public Hamburguer getHamburguer() { return this.hamburguer; }
 
     public void exibirResumo() {
         System.out.println("Lanche: " + hamburguer.getDescricao() + " | R$ " + hamburguer.getPreco());
         System.out.println("Acompanhamento: " + acompanhamento.getDescricao());
         System.out.println("Bebida: " + bebida.getDescricao());
+        System.out.println("Desconto: " + estrategiaDeDesconto.getDescricao());
+        System.out.printf("Total com desconto: R$ %.2f%n", getPrecoFinal());
         System.out.println("--------------------------------------------------");
     }
 }

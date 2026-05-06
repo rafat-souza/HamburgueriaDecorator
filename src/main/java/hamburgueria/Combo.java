@@ -18,6 +18,14 @@ public class Combo {
         this.bebida = fabrica.criarBebida();
     }
 
+    public Combo(Hamburguer hamburguer, Acompanhamento acompanhamento,
+                 Bebida bebida, EstrategiaDeDesconto desconto) {
+        this.hamburguer = hamburguer;
+        this.acompanhamento = acompanhamento;
+        this.bebida = bebida;
+        this.estrategiaDeDesconto = desconto;
+    }
+
     public void adicionarObserver(PedidoObserver observer) {
         observers.add(observer);
     }

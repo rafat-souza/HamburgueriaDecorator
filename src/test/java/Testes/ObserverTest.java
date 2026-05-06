@@ -2,8 +2,8 @@ package Testes;
 
 import hamburgueria.Combo;
 import hamburgueria.Combos.FabricaComboTradicional;
-import hamburgueria.Observadores.Caixa;
-import hamburgueria.Observadores.Cozinha;
+import hamburgueria.Setores.Caixa;
+import hamburgueria.Setores.Cozinha;
 import hamburgueria.PedidoObserver;
 import org.junit.jupiter.api.Test;
 
